@@ -4,7 +4,7 @@
   "description": "A Node.js-based To-Do list application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run server --prefix backend\" \"npm start --prefix frontend\""
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
